@@ -60,8 +60,18 @@ vetor1.push('uva', 'abacate')
 // Métodos de percurso de vetores
 
 // Forma 1: usando o for tradicional
-//
+// O início da variável é sempre na posição 0 e seu incremento
+// deve ir até uma posição ANTES do seu número de elemento(lenght)
 for(let i = 0; i < vetor1.length; i++) {
     console.log(vetor1[i])
+}
+
+console.log('----------------------')
+
+// Forma 2: for..of
+// Percorrer o vetor do primeiro ao último elemento de 
+// uma forma mais simples que o for tradicional
+for(let fruta of vetor1) {
+    console.log(fruta)
 }
 
