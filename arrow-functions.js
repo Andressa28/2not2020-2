@@ -5,7 +5,7 @@
 // - Seu corpo tem apenas uma linha de código com return
 
 let quadrado = function(n){
-    return n + n
+    return n * n
 }
 
 // A função tradicional acima pode ser transformada em um ARROW FUNCTION
@@ -14,7 +14,7 @@ let quadrado = function(n){
 // - Após o argumento há a flecha (arrow) =>
 // - As chaves e a palavra return são omitidos
 
-let quadrado2 = n => n + n
+let quadrado2 = n => n * n
 
 console.log(quadrado(6))
 console.log(quadrado2(6))
