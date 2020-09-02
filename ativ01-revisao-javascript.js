@@ -112,8 +112,7 @@ estadosNe.push(estado9)
 
 let dens = (area, populacao) => populacao / area)
 
-console.log(dens(21915.08, 2278308))
-
+console.log(dens)
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -124,14 +123,14 @@ console.log(dens(21915.08, 2278308))
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
-for(let i = 0; i < EstadoNe.length; i++) {
-    console.log(EstadoNe[i])
-    console.log(dens(21915.08, 2278308))
+for(let i = 0; i < estadosNe.length; i++) {
+    console.log(estadosNe[i])
+    console.log(dens)
 
-EstadoNe['densidade demográfica'] = 123456789
+estadosNe['densidade_demográfica'] = dens
 
 }
-delete sigla.EstadoNe
+delete EstadoNe.sigla
 
 console.log('-----------------------------------')
 console.log(sigla)
@@ -142,14 +141,12 @@ console.log(sigla)
 */
 
 
-
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
 
 /*
 
-   6)
-      a) Declare um vetor vazio.
+   6) a) Declare um vetor vazio.
       b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
          os dados no topo deste arquivo, um de cada vez. Faça as inserções de 
          modo que o vetor final esteja em ordem alfabética. No caso, o primeiro 
