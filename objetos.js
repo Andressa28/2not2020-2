@@ -1,68 +1,58 @@
-// Forma 3: forEach()
-// O argumento do forEach() é uma função que recebe cada elemento do vetor para fazer algo com ele
-// Argumento com arrow function
-
-vetor1.forEach(fruta => console.log(fruta))
-
-// Arguemnto como função tradicional
-
-vetor1.forEach(function(fruta) {
-    console.log(fruta)
-})
-
 // Declaração de objeto vazio
+let pessoal = {}            // Método moderno
+let pessoa2 = new Object()  // Método tradicional
 
-let pessoal = {} // Método moderno
-let pessoa2 = new Object() // Método tradicional
-
-// Declarando e inicializando um objeto já com propriedades - propriedade -> atributo + valor
-
+// Declarando e inicializando um objeto já com propriedades
+//  - propriedade -> atributo + valor
 let pessoa3 = {
-nome: 'João das Couves',
-naturalidade: 'Franca/SP',
-data_de_nascimento: '1997-11-03',
-estudante_fatec: true
+    nome: 'João das Couves',
+    naturalidade: 'Franca/SP',
+    "data de nascimento": '1997-11-03',
+    estudante_fatec: true
 }
+
 // Acessando uma propriedade de um objeto
 // Atributo é uma única palavra -> sintaxe do ponto
-
 console.log(pessoa3.nome)
 console.log(pessoa3.estudante_fatec)
 
-// Acessando uma propriedade composta por várias palavras -> sintaxe de colchetes
+// Acessando uma propriedade composta por várias palavras -> 
+// sintaxe de colchetes
+console.log(pessoa3 ['data de nascimento'])
 
-console.log(pessoa3 ['data_de_nascimento'])
-
-// Sintaxe dos colchetes SEMPRE funciona, mesmo com propriedades cujo nome é uma única palavra
-
-console.log(pessoa3{'naturalidade'})
+// Sintaxe dos colchetes SEMPRE funciona, mesmo com propriedades 
+// cujo nome é uma única palavra
+console.log(pessoa3 ['naturalidade'])
 
 let atrib= 'nome'
 console.log(pessoa3[atrib])
 
 // Criando novas propriedades com objeto
-
-pessoa3.nacionalidade = 'portuguesa' // Uma palavra
-pessoa3['registro de estrangeiro'] = 123456789 //Várias palavras
+// -> basta atribuir o valor a um nome de atributo, segundo
+// a sintaxe apropriada a cada caso
+pessoa3.nacionalidade = 'portuguesa'             // Uma única palavra
+pessoa3['registro de estrangeiro'] = 123456789   // Várias palavras
 
 console.log(pessoa3)
 
 // Eliminando uma prorpiedade
-
 delete pessoa3.estudante_fatec
 
 console.log('---------------------------------------------')
+
 console.log(pessoa3)
 
-// Como percorrer todas as propriedades de um objeto: for..in
+console.log('---------------------------------------------')
 
+// Como percorrer todas as propriedades de um objeto: for..in
 for(let prop in pessoa3) {
     console.log(prop)
 }
-
+console.log('---------------------------------------------')
 // Listando atributo e valor de um objeto usando for..in
-
-for(let prop im pessoa3) {
-    // console.log('Atributo:' + atrib + '; valor: ' + pessoa3[atrib])
+for(let atrib in pessoa3) {
+// console.log('Atributo:' + atrib + '; valor: ' + pessoa3[atrib])
+// ou
+// Usando string template (delimitado por ACENTOS GRAVES)
     console.log(`Atributo: ${atrib}; valor: ${pessoa3[atrib]}`)
 }
