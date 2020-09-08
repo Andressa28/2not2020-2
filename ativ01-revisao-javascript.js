@@ -109,10 +109,9 @@ estadosNe.push(estado9)
       calcule a densidade demográfica retornando o resultado da divisão da
       segunda pela primeira. 
 */
+const densidadeDemog = (area, pop) => pop / area
 
-let dens = (area, populacao) => populacao / area)
-
-console.log(dens)
+console.log(densidadeDemog)
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -124,16 +123,13 @@ console.log(dens)
 
 */
 for(let i = 0; i < estadosNe.length; i++) {
-    console.log(estadosNe[i])
-    console.log(dens)
+   // Acrescentando a nova propriedade "densidade demográfica".
+   // O nome contém duas palavras, então a sintaxe de colchetes é obrigatória.
+   estadosNe[i]['densidade demográfica'] = densidadeDemog(estadosNe[i].area, estadosNe[i].populacao)
 
-estadosNe['densidade_demográfica'] = dens
-
+   // Excluindo a propriedade "sigla"
+   delete estadosNe[i].sigla
 }
-delete EstadoNe.sigla
-
-console.log('-----------------------------------')
-console.log(sigla)
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
