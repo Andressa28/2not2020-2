@@ -13,7 +13,7 @@ vetor1.push('limão')
 
 console.log(vetor1)
 
-// Forma 2 : unshift()
+// Forma 2 : unshift() -> adiciona novos elementos NO INÍCIO do vetor
 vetor1.unshift('maça')
 console.log(vetor1)
 
@@ -52,16 +52,19 @@ vetor1.splice(1, 1, 'pera')
 console.log(vetor1)
 
 // Colocando mais alguns elementos no vetor: pode inserir vários na mesma linha usando a vírgula
-vetor1.push('amora')
-vetor1.push('jabuticaba')
+vetor1.push('amora', 'jabuticaba')
 vetor1.push('pêssego')
-vetor1.push('uva', 'abacate')
+vetor1.push('uva')
+vetor1.push('abacate')
+console.log(vetor1)
 
 // Métodos de percurso de vetores
 
 // Forma 1: usando o for tradicional
 // O início da variável é sempre na posição 0 e seu incremento
-// deve ir até uma posição ANTES do seu número de elemento(lenght)
+// deve ir até uma posição ANTES do seu número de elementos (lenght)
+
+// i++ significa i = i + 1 
 for(let i = 0; i < vetor1.length; i++) {
     console.log(vetor1[i])
 }
