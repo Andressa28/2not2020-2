@@ -91,5 +91,3 @@ vetor1.forEach(fruta => console.log(fruta))
 vetor1.forEach(function(fruta) {
     console.log(fruta)
 })
-
-
