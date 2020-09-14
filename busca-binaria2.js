@@ -8,7 +8,9 @@ function buscaBinaria(lista, valorBusca, fnComp) {
     while(fim >= inicio) {
         // Math.floor(): retira as casas decimais de um número
         let meio = Math.floor((fim + inicio) / 2)
+
         let res = fnComp(lista[meio], valorBusca)
+
         // Verifica se o valor na posição média é o valor de busca
         if(res == 0) {
             comp++
@@ -24,7 +26,9 @@ function buscaBinaria(lista, valorBusca, fnComp) {
         }
     }
     return -1       // Valor não encontrado
+
 }
+
 function comparaNome(obj, valorBusca) {
     // Os dois valores são iguais
     if(valorBusca === obj.first_name) return 0
