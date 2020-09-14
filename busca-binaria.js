@@ -1,12 +1,14 @@
 // Pré-requisito para a busca binária: o conjunto de dados
 // PRECISA estar ordenado pelo critério de busca
-fucntion buscaBinaria(lista, valorBusca){
+let comp = 0
+function buscaBinaria(lista, valorBusca) {
     let inicio = 0
     let fim = lista.length - 1
 
     while(fim >= inicio) {
         // Math.floor(): retira as casas decimais de um número
         let meio = Math.floor((fim + inicio) / 2)
+
         // Verifica se o valor na posição média é o valor de busca
         if(valorBusca === lista[meio]) {
             comp++
@@ -35,7 +37,6 @@ console.log('Comparações', comp)
 console.log('----------------------')
 
 comp = 0
-
 console.time('ZOZIMO')
 console.log(buscaBinaria(vetorNomes, 'ZOZIMO'))
 console.timeEnd('ZOZIMO')
@@ -44,14 +45,7 @@ console.log('Comparações', comp)
 console.log('----------------------')
 
 comp = 0
-
-onsole.time('MARIA')
+console.time('MARIA')
 console.log(buscaBinaria(vetorNomes, 'MARIA'))
 console.timeEnd('MARIA')
 console.log('Comparações', comp)
-
-console.log('----------------------')
-
-comp = 0
-
-
