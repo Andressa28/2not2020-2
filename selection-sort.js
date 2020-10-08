@@ -45,4 +45,8 @@ let nomes = require('./dados/100-mil-nomes')
 console.time('Teste nomes')
 selectionSort(nomes) // Selection Sort melhora em cerca de 50% o tempo em relação ao Bubble Sort
 console.timeEnd('Teste nomes')
+
+// Medindo a memória utilizada pelo programa
+let memoria = process.memoryUsage().heapUsed / 1024 / 1024
 console.log(nomes)
+console.log('Memória Utilizada (MB:', memoria)
