@@ -56,3 +56,4 @@ console.timeEnd('Teste candidatos')
 console.log(candidatos)
 console.log('Memória usada (MB):', process.memoryUsage().heapUsed / 1024 / 1024)
 console.log({passadas, comparacoes, trocas})
+
